@@ -1,0 +1,10 @@
+.firebase
+__pycache__
+src/res
+.venv
+firebase.json
+package.json
+notes
+node_modules
+.firebaserc
+package-lock.json

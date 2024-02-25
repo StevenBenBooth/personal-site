@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="title">{% block title %} Cafes {% endblock %}</h1>
+<div class="content">
+  {% for cafe in cafes %}
+  <div class="cafe">
+    <b>
+      <p class="name">{{ cafe.name }}</p>
+    </b>
+    <p>{{ cafe.get_location() }}</p>
+    <p>{{ cafe.get_rating() }}</p>
+    <table>
+      <tr>
+        <td>Walkup Window</td>
+        <td>Sparkling Water</td>
+        <td>Wifi Available</td>
+      </tr>
+      <tr>
+        <td>{{ cafe.has_walkup_window() }}</td>
+        <td>{{ cafe.has_sparkling_water() }}</td>
+        <th>{{ cafe.get_wifi_status() }}</th>
+      </tr>
+    </table>
+    <!-- Could render review as bullet points with jinja for-loop? -->
+    <div class="review">
+      <h4>Review</h4>
+      <p>{{ cafe.review|safe }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
