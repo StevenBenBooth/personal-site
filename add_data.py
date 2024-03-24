@@ -38,6 +38,8 @@ def add_cafe(
     wifi_status_id,
     sparkling_water_ind,
 ):
+    # wifi_status_id is 0 for yes, 1 for no, and 2 for unknown
+    # That should really be in the database
     return sa.insert(Cafe).values(
         name=name,
         walkup_window_ind=int(has_walkup_window),
@@ -53,9 +55,10 @@ add_location("Seattle - SLU")
 add_location("Seattle - Pioneer Square")
 add_location("Seattle - Downtown")
 add_location("Seattle - Pike Place")
-add_location("Vancouver")
+add_location("Vancouver, BC")
 add_location("Oceanside, CA")
-add_location("San Diego")
+add_location("La Jolla, CA")
+add_location("San Diego, CA")
 
 cafe_db = pd.read_csv(
     os.path.join("notes", "cafe info.csv"),

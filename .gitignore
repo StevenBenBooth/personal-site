@@ -8,3 +8,5 @@ notes
 node_modules
 .firebaserc
 package-lock.json
+firebase-debug.log
+./server/firebase-debug.log

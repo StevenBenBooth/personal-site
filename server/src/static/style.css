@@ -10,6 +10,15 @@
   flex-wrap: wrap;
 }
 
+.text-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 5%;
+  font-size: 1.3rem
+}
+
 .cafe {
   flex: 20%;
   padding: 10px;
